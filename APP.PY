@@ -9,7 +9,7 @@ st.title("📱 Gestão de Atividades - CAO")
 
 # Criando a conexão com o Google Sheets
 # Importante: cole o link completo da sua planilha abaixo
-url_planilha = "COLE_AQUI_O_LINK_DA_SUA_PLANILHA"
+url_planilha = "https://www.appsheet.com/template/AppDef?appName=TRABALHOSCAO-2026-860106188&appId=bd5f83bf-88b1-4ad5-9a2b-d2e782f1cdd2&quickStart=False#UX.Views.Tabela%20de%20Cronograma%20Acad%C3%AAmico"
 
 conn = st.connection("gsheets", type=GSheetsConnection)
 
@@ -63,4 +63,5 @@ with st.form("nova_demanda_form", clear_on_submit=True):
         conn.update(worksheet="Dados", data=dados_atualizados)
         
         st.success("✅ Atividade adicionada com sucesso!")
+
         st.rerun() # Atualiza a tela instantaneamente
